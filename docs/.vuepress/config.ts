@@ -1,0 +1,30 @@
+import { defineUserConfig, defaultTheme } from "vuepress";
+
+export default defineUserConfig({
+  lang: "zh-CN",
+  title: "Aiyartoth",
+  description: "docs backup",
+  theme: defaultTheme({
+    // 默认主题配置
+    navbar: [
+      {
+        text: "首页",
+        link: "/",
+      },
+      {
+        text: "程序",
+        link: "/program",
+      },
+      { text: "杂记", link: "/note" },
+    ],
+    sidebar: {
+      "/program": [
+        {
+          text: "Html/Css",
+          link: "/program/html",
+        },
+      ],
+      "/note": ["/note/", "/note/2023年01月13日.md"],
+    },
+  }),
+});
