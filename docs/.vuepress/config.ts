@@ -4,6 +4,7 @@ export default defineUserConfig({
   lang: "zh-CN",
   title: "Aiyartoth",
   description: "docs backup",
+  dest: "dist",
   theme: defaultTheme({
     // 默认主题配置
     navbar: [
