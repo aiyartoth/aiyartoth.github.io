@@ -21,3 +21,4 @@ vacationserviceworker.js
 # vuepress
 .cache
 .temp
+package-lock.json
