@@ -19,6 +19,7 @@ coverage
 vacationserviceworker.js
 
 # vuepress
-.cache
-.temp
+.cache/
+.temp/
 package-lock.json
+dist/

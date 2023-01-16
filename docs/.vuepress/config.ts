@@ -1,10 +1,12 @@
 import { defineUserConfig, defaultTheme } from "vuepress";
+import { gitPlugin } from "@vuepress/plugin-git";
 
 export default defineUserConfig({
+  base: "/docs/",
   lang: "zh-CN",
   title: "Aiyartoth",
   description: "docs backup",
-  dest: "dist",
+  dest: "dist/docs",
   theme: defaultTheme({
     // 默认主题配置
     navbar: [
@@ -25,7 +27,15 @@ export default defineUserConfig({
           link: "/program/html",
         },
       ],
-      "/note": ["/note/", "/note/2023年01月13日.md"],
+      "/note": ["/note"],
     },
   }),
+  plugins: [
+    // @ts-ignore
+    gitPlugin({
+      createdTime: false,
+      updatedTime: false,
+      contributors: false,
+    }),
+  ],
 });
