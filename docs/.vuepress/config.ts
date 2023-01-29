@@ -27,7 +27,7 @@ export default defineUserConfig({
           link: "/program/html",
         },
       ],
-      "/note": ["/note"],
+      "/note": ["/note", "/note/collect.md"],
     },
   }),
   plugins: [
