@@ -3,6 +3,8 @@ export const pagesData = {
   "v-8daa1a0e": () => import(/* webpackChunkName: "v-8daa1a0e" */"D:/github/aiyartoth.github.io/docs/.vuepress/.temp/pages/index.html.js").then(({ data }) => data),
   // path: /note/collect.html
   "v-0d35c313": () => import(/* webpackChunkName: "v-0d35c313" */"D:/github/aiyartoth.github.io/docs/.vuepress/.temp/pages/note/collect.html.js").then(({ data }) => data),
+  // path: /note/plain.html
+  "v-1046a773": () => import(/* webpackChunkName: "v-1046a773" */"D:/github/aiyartoth.github.io/docs/.vuepress/.temp/pages/note/plain.html.js").then(({ data }) => data),
   // path: /note/
   "v-15054f24": () => import(/* webpackChunkName: "v-15054f24" */"D:/github/aiyartoth.github.io/docs/.vuepress/.temp/pages/note/index.html.js").then(({ data }) => data),
   // path: /program/
