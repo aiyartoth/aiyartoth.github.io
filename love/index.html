@@ -1,0 +1,99 @@
+<!doctype html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta data-n-head="ssr" name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1.0, minimum-scale=1.0,user-scalable=no,viewport-fit=cover">
+    <link rel="shortcut icon" href="./favicon.ico">
+    <title>相识每一天</title>
+    <style type="text/css">
+        /*@font-face {
+            font-family: digit;
+            src: url('digital-7_mono.ttf') format("truetype");
+        }*/
+    </style>
+
+    <link href="./css/default.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="./js/jquery.js"></script>
+    <script type="text/javascript" src="./js/garden.js"></script>
+    <script type="text/javascript" src="./js/functions.js"></script>
+
+</head>
+<body>
+<div id="mainDiv">
+    <div id="content">
+        <div id="code">
+            <span class="comments">/**</span><br/>
+            <span class="space"/><span class="comments">*2019—02-08,</span><br/>
+            <span class="space"/><span class="comments">*2020-11-14.</span><br/>
+            <span class="space"/><span class="comments">*/</span><br/>
+            Boy name = <span class="keyword">Mr</span> XU<br/>
+            Girl name = <span class="keyword">Mrs</span> XIA<br/>
+            <span class="comments">// 天空下着小雨. </span><br/>
+            第一次见面,简简单单的介绍,匆匆忙忙的去上班;<br/>
+            <span class="comments">// 似乎并没有太多的期待.</span><br/>
+            等再次相见,是让人心动的感觉;<br/>
+            <span class="comments">// 似乎这是一辈子注定,不想放手.</span><br/>
+            <span class="comments">// 你也不反对.</span><br/>
+            一场疫情,分隔两地;<br/>
+            心中的感情却更加明确;<br/>
+            <span class="comments">// 此时此刻.</span><br/>
+            <br>
+            I want to say:<br/>
+            Baby, I love you forever;<br/>
+        </div>
+        <div class="loveHeartWrap">
+            <div id="loveHeart">
+                <canvas id="garden"></canvas>
+                <div id="words">
+                    <div id="messages">
+                        <p style="white-space: nowrap">亲爱的，这是我们相爱在一起的时光。</p>
+                        <div id="elapseClock"></div>
+                    </div>
+                    <div id="loveu">
+                        爱你直到永永远远。<br/>
+                        <div class="signature">- 徐先生</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    var offsetX = $("#loveHeart").width() / 2;
+    var offsetY = $("#loveHeart").height() / 2 - 55;
+    var together = new Date();
+    together.setFullYear(2019, 2, 8);
+    together.setHours(12);
+    together.setMinutes(0);
+    together.setSeconds(0);
+    together.setMilliseconds(0);
+
+    if (!document.createElement('canvas').getContext) {
+        var msg = document.createElement("div");
+        msg.id = "errorMsg";
+        msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+        document.body.appendChild(msg);
+        $("#code").css("display", "none")
+        $("#copyright").css("position", "absolute");
+        $("#copyright").css("bottom", "10px");
+        document.execCommand("stop");
+    } else {
+        setTimeout(function () {
+            startHeartAnimation();
+        }, 5000);
+
+        timeElapse(together);
+        setInterval(function () {
+            timeElapse(together);
+        }, 500);
+
+        adjustCodePosition();
+        $("#code").typewriter();
+    }
+</script>
+
+</body>
+</html>
