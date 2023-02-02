@@ -27,7 +27,7 @@ export default defineUserConfig({
           link: "/program/html",
         },
       ],
-      "/note": ["/note", "/note/collect.md","/note/plain.md"],
+      "/note": ["/note", "/note/collect.md", "/note/plain.md"],
     },
   }),
   plugins: [
@@ -38,4 +38,7 @@ export default defineUserConfig({
       contributors: false,
     }),
   ],
+  markdown: {
+    plugins: ['task-lists']
+  }
 });
